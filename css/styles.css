@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    background-color: #292828;
+    width: 100%;
+}
+
+ul, li {
+    display: flex;
+    gap: 2rem;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.nav-dropdowns {
+    display: flex;
+    gap: 2rem;
+}
+
+a {
+    color: white;
+}
+
+.logo-img {
+    margin-top: 2rem;
+    text-align: center;
+
+}
+
+.all-dropdowns {
+    height: 30px;
+    width: 120px;
+    position: relative ;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdowns {
+    height: auto;
+    width: 150px;
+    padding-top: 2rem;
+    background-color: #292828;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.dropdowns a {
+    color: white;
+    display: block;
+    text-align: left;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.dropdowns a:hover {
+    color: burlywood;
+    text-decoration: none;
+}
+
+.all-dropdowns:hover .dropdowns{
+     display: block;
+}
+
+.home-dropdown {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    z-index: 99999;
+}
+
+.button {
+    font-size: rem;
+    background-color: burlywood;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.button:hover {
+    background-color: #292828;
+}
+
+.my-carosel {
+    z-index: -999;
+}
+
+.under-carousel {
+    margin-top: 2rem;
+}
+
+.under-carousel img {
+    position: relative;
+}
+
+.under-carousel-text {
+    position: absolute;
+    top: 0;
+    padding: 2rem;
+    padding-top: 7rem;
+}
+
+/* .banner-card {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.banner-card img {
+    width: 100%;
+}
+
+.banner-text {
+    position: absolute;
+    top: 0;
+    padding: 8rem;
+    font-size: 1.5rem;
+} */
+
+.carousel-text {
+    padding-bottom: 10rem;
+    padding-right: 35rem;
+}
+
+.carousel-text p {
+    color: burlywood;
+}
+
+.first-carousel-p {
+    font-size: 2rem;
+}
+
+.new-designs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.banner_thumb {
+    position: relative;
+}
+
+.banner_content {
+    position: absolute;
+    top: 0;
+    padding: 2rem;
+    padding-top: 7rem;
+}
+
+.featured-New-Arrival {
+    display: inline-block;
+    gap: 2rem;
+    text-align: center;
+}
+
+.featured-button {
+    background-color: #292828;
+    color: burlywood;
+    border-color: burlywood;
+    height: 3rem;
+    width: 10rem;
+}
+
+.new-arrival-button {
+    background-color: #292828;
+    color: white;
+    height: 3rem;
+    width: 10rem;
+    border-color: black;
+}
+
+.on-sale-button {
+    background-color: #292828;
+    color: white;
+    height: 3rem;
+    width: 10rem;
+    border-color: black;
+}
+
+.new-arrival-button:hover, .on-sale-button:hover {
+    color: burlywood;
+}
+
+.first-row-img-boxes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.first-img-box, .second-img-box, .third-img-box, .fouth-img-box, .fifth-img-box, 
+.sec-first-img-box, .sec-second-img-box, .sec-third-img-box, .sec-fouth-img-box,
+.sec-fifth-img-box, .thir-first-img-box, .thir-second-img-box, .thir-third-img-box,
+.thir-fouth-img-box, .thir-fifth-img-box {
+    position: relative;
+    width: 13rem;
+    height: 13rem;
+}
+
+.first-img-box img, .second-img-box img, .third-img-box img, .fouth-img-box img, .fifth-img-box img,
+.sec-first-img-box img, .sec-second-img-box img, .sec-third-img-box img, .sec-fouth-img-box img,
+.sec-fifth-img-box img, .thir-first-img-box img, .thir-second-img-box img, .thir-third-img-box img,
+.thir-fouth-img-box img, .thir-fifth-img-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.first-img-box #img17:hover, .second-img-box #img21:hover, .third-img-box #img1:hover, .fouth-img-box #img3:hover, .fifth-img-box #img9:hover,
+.sec-first-img-box #img19:hover, .sec-second-img-box #img23:hover, .sec-third-img-box #img5:hover, .sec-fouth-img-box #img7:hover,
+.sec-fifth-img-box #img11:hover, .thir-first-img-box #img40:hover, .thir-second-img-box #img42:hover, .thir-third-img-box #img71:hover,
+.thir-fouth-img-box #img33:hover, .thir-fifth-img-box #img44:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+#img17, #img21, #img1, #img3, #img9, #img19, #img23, #img5, #img7, #img11, #img40, #img42, #img71, #img33, #img44 {
+    position: relative;
+}
+
+#button {
+    position: absolute;
+    height: 3rem;
+    width: 10rem;
+    margin-top: 9rem;
+    /* margin-left: 1.5rem; */
+    text-align: center;
+    background-color: #292828;
+    color: white;
+}
+
+#button:hover {
+    background-color: burlywood;
+}
+
+.first-img-box-sub-text {
+    text-align: center;
+}
+
+.ring-necklace, .earring {
+    color: gray;
+    text-decoration: none;
+}
+
+.ring-necklace:hover, .earring:hover {
+    color: burlywood;
+}
+
+.ring {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.ring:hover {
+    color: burlywood;
+}
+
+.old_price {
+    color: gray;
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+
+.current_price {
+    color: burlywood;
+    font-size: 1.2rem;
+}
+
+.second-row-img-boxes {
+    margin-bottom: 2rem;
+    margin-top: 10rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.under-the-boxes {
+    margin-top: 10rem;
+}
+
+.under-the-boxes-text p {
+    color: burlywood;
+    font-size: 2rem;
+}
+
+.under-the-boxes-text h2 {
+    color: white;
+    font-size: 2rem;
+}
+
+.under-the-boxes-text span {
+    color: gray;
+    font-size: 2rem;
+}
+
+.under-the-boxes-text a {
+    border: 1px solid burlywood;
+    color: burlywood;
+    padding: 0.2rem;
+    margin-top: 2rem;
+}
+
+.under-the-boxes-text a:hover {
+    background-color: burlywood;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.under-the-boxes {
+    position: relative;
+    text-align: center;
+}
+
+.under-the-boxes-text {
+    position: absolute;
+    top: 0;
+    padding: 10rem;
+    padding-left: 25rem;
+}
+
+.bestselling {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.third-row-img-boxes {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sparkle-updates {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* .sparkle-updates::after{
+    
+} */
+
+.my-card img {
+    width: 20rem;
+}
+
+.my-card h4, .my-card p {
+    color: white;
+}
+
+.swiper-pagination {
+    bottom: -2px;
+    position: absolute;
+}
+
+.my-card {
+    width: 20rem;
+}
+
+.main-card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.instagram-imgs {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.instagram-imgs img {
+    width: 12rem;
+}
+
+/* .instagram-img1 {
+    position: relative;
+} */
+
+/* .instagram-empty {
+    background-color: pink;
+    position: absolute;
+} */
+
+.subcribe {
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.subcribe p {
+    color: gray;
+}
+
+.subcribe input {
+    background-color: #292828;
+}
+
+.under-subcribe {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.under-subcribe img {
+    width: 35rem;
+    border-radius: 0.5rem;
+}
+
+.footer {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.about-sparkle h3, .information h3, .account h3, .top-rated h3 {
+    color: white;
+}
+
+.about-sparkle p, .about-sparkle a, .information a, .account a, .top-rated a {
+    color: gray;
+}
+
+.information a {
+    margin-bottom: 0;
+}
+
+.information ul, .account ul, .top-rated ul {
+    display: inline;
+}
+
+.copyright {
+    text-align: center;
+}
