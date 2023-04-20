@@ -80,7 +80,10 @@ a {
     justify-content: center;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    z-index: 99999;
+}
+
+.all-dropdowns {
+    z-index: 2;
 }
 
 .button {
@@ -95,48 +98,17 @@ a {
     background-color: #292828;
 }
 
-.my-carosel {
-    z-index: -999;
-}
-
-.under-carousel {
-    margin-top: 2rem;
-}
-
-.under-carousel img {
-    position: relative;
-}
-
-.under-carousel-text {
-    position: absolute;
-    top: 0;
-    padding: 2rem;
-    padding-top: 7rem;
-}
-
-/* .banner-card {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.banner-card img {
-    width: 100%;
-}
-
-.banner-text {
-    position: absolute;
-    top: 0;
-    padding: 8rem;
-    font-size: 1.5rem;
-} */
-
 .carousel-text {
-    padding-bottom: 10rem;
-    padding-right: 35rem;
+    position: absolute;
+    top: 15vw;
+    left: 5vw;
+    width: fit-content;
+    height: fit-content;
 }
 
-.carousel-text p {
+.carousel-text button:hover {
     color: burlywood;
+    background-color: transparent;
 }
 
 .first-carousel-p {
@@ -160,8 +132,6 @@ a {
 }
 
 .featured-New-Arrival {
-    display: inline-block;
-    gap: 2rem;
     text-align: center;
 }
 
@@ -237,7 +207,6 @@ a {
     height: 3rem;
     width: 10rem;
     margin-top: 9rem;
-    /* margin-left: 1.5rem; */
     text-align: center;
     background-color: #292828;
     color: white;
@@ -350,10 +319,6 @@ a {
     margin-top: 3rem;
 }
 
-/* .sparkle-updates::after{
-    
-} */
-
 .my-card img {
     width: 20rem;
 }
@@ -362,38 +327,73 @@ a {
     color: white;
 }
 
-.swiper-pagination {
-    bottom: -2px;
-    position: absolute;
-}
-
 .my-card {
     width: 20rem;
+}
+
+.my-card a {
+    color: burlywood;
 }
 
 .main-card {
     position: relative;
     overflow: hidden;
+    padding-block: 2rem;
+    cursor: pointer;
 }
 
 
 .instagram-imgs {
     display: flex;
-    margin-top: 2rem;
+    overflow-x: scroll;
 }
 
-.instagram-imgs img {
-    width: 12rem;
+.instagram-imgs::-webkit-scrollbar{
+    display: none;
 }
 
-/* .instagram-img1 {
+.instagram {
+    transition: all 200ms ease-in;
+}
+
+.instagram-main{
     position: relative;
-} */
+}
 
-/* .instagram-empty {
-    background-color: pink;
+.instagram-main:hover .instagram {
+    background-color: rgba(255, 69, 44, 0.638);
+    filter: saturate(0.8);
+    cursor: pointer;
+}
+
+.instagram img {
+    width: 12.5rem;
+}
+
+.instagram img:hover {
+    mix-blend-mode: multiply;
+}
+
+.instagram-handle {
     position: absolute;
-} */
+    top: 40%;
+    left: 8%;
+    padding-inline: .5rem;
+    padding-block: .5rem 0;
+    opacity: 0;
+    border-radius: .5rem;
+    transition: all 150ms;
+}
+
+.instagram-handle:hover {
+    background-color: rgba(255, 0, 0, 0.313);
+    backdrop-filter: blur(10px);
+}
+
+.instagram:hover .instagram-handle {
+    opacity: 1;
+    z-index: 999;
+}
 
 .subcribe {
     margin-top: 2rem;
@@ -410,22 +410,40 @@ a {
 }
 
 .under-subcribe {
-    margin-top: 3rem;
-    margin-bottom: 5rem;
     display: flex;
     gap: 2rem;
-    align-items: center;
-    justify-content: center;
+}
+
+.under-subcribe-main {
+    position: relative;
+}
+
+.under-subcribe-text {
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    font-size: 1.75rem;
+    text-align: center;
+    z-index: 999;
+}
+
+.under-subcribe-text p:last-child {
+    font-size: 1rem;
 }
 
 .under-subcribe img {
     width: 35rem;
     border-radius: 0.5rem;
+    filter: brightness(0.5);
 }
 
 .footer {
     margin-top: 3rem;
     margin-bottom: 5rem;
+}
+
+.information li, .footer_menu li {
+    margin-block: .75rem;
 }
 
 .about-sparkle h3, .information h3, .account h3, .top-rated h3 {
